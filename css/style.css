@@ -1,0 +1,10 @@
+span.number-icon {
+    float: left;
+    margin: 0 4px 0 -12px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #00bfa5;
+    color: #fff;
+}
