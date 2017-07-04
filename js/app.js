@@ -44,27 +44,47 @@ var chipData = [
 	},
 ]
 
-for (i = 0; i < chipData.length; i++) {
+function displayChips() {
+	chipContainer.innerHTML = "";
 
-	var cuisine = chipData[i].cuisine;
-	var voteCount = chipData[i].voteCount;
+	chipData.sort(function(a, b) {
+		console.log(parseFloat(a.voteCount) - parseFloat(b.voteCount))
+		return parseFloat(b.voteCount) - parseFloat(a.voteCount);
+	});
 
-	var chipTemplate = `<div class="chip"><span class="vote-count">${voteCount}</span>${cuisine}</div>`;
+	for (i = 0; i < chipData.length; i++) {
+		var cuisine = chipData[i].cuisine;
+		var voteCount = chipData[i].voteCount;
 
-	chipContainer.innerHTML += chipTemplate;
+		var chipTemplate = `<div class="chip"><span class="vote-count">${voteCount}</span><span class="cuisine-name">${cuisine}</span></div>`;
+
+		chipContainer.innerHTML += chipTemplate;
+	}
+
+	chipClick();
 }
 
+displayChips();
 
 
-
-
+function chipClick() {
 $('.chip').click(function(e) {
-  // var el = parseInt($('.vote-count').text());
+	cuisineName = $(this).children('.cuisine-name').html();
 
-  var targetCount = $(this).children('.vote-count');
+	currentCuisine = chipData.filter(function(obj) {
+		return obj.cuisine == cuisineName;
+	});
 
-  targetCount.text(parseInt($(targetCount).text()) + 1);
+	// console.log(cuisineName);
+	// console.log(currentCuisine);
 
-  // $(this).children('.vote-count').text(parseInt($('.vote-count').text()) +1);
-  console.log(e);
+	currentCuisine[0].voteCount += 1;
+
+	displayChips();
+});
+};
+
+chipData.sort(function(a, b) {
+	console.log(parseFloat(a.voteCount) - parseFloat(b.voteCount))
+	return parseFloat(a.voteCount) - parseFloat(b.voteCount);
 });
