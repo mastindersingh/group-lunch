@@ -1,4 +1,5 @@
 var chipContainer = document.getElementById('chip-container');
+var chipResultsContainer = document.getElementById("chip-container-results")
 
 
 var chipData = [
@@ -48,7 +49,7 @@ function displayChips() {
 	chipContainer.innerHTML = "";
 
 	chipData.sort(function(a, b) {
-		console.log(parseFloat(a.voteCount) - parseFloat(b.voteCount))
+		// console.log(parseFloat(a.voteCount) - parseFloat(b.voteCount))
 		return parseFloat(b.voteCount) - parseFloat(a.voteCount);
 	});
 
@@ -62,6 +63,26 @@ function displayChips() {
 	}
 
 	chipClick();
+}
+
+function displayChipsResults() {
+	chipResultsContainer.innerHTML = "";
+
+	chipData.sort(function(a, b) {
+		// console.log(parseFloat(a.voteCount) - parseFloat(b.voteCount))
+		return parseFloat(b.voteCount) - parseFloat(a.voteCount);
+	});
+
+	for (i = 0; i < chipData.length; i++) {
+		var cuisine = chipData[i].cuisine;
+		var voteCount = chipData[i].voteCount;
+
+		var chipTemplate = `<div class="chip"><span class="vote-count">${voteCount}</span><span class="cuisine-name">${cuisine}</span></div>`;
+
+		chipResultsContainer.innerHTML += chipTemplate;
+	}
+
+	// chipClick();
 }
 
 displayChips();
@@ -85,6 +106,5 @@ $('.chip').click(function(e) {
 };
 
 chipData.sort(function(a, b) {
-	console.log(parseFloat(a.voteCount) - parseFloat(b.voteCount))
 	return parseFloat(a.voteCount) - parseFloat(b.voteCount);
 });

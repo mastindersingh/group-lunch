@@ -8,3 +8,7 @@ span.vote-count {
   background-color: #00bfa5;
   color: #fff;
 }
+
+.view-results {
+	width: 100%;
+}
