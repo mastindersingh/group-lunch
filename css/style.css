@@ -12,3 +12,7 @@ span.vote-count {
 .view-results {
 	width: 100%;
 }
+
+.card-content {
+	height: 250px;
+}
