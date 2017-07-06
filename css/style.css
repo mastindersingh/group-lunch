@@ -16,3 +16,7 @@ span.vote-count {
 .card-content {
 	/*height: 250px;*/
 }
+
+.row {
+	margin-bottom: 0px;
+}
