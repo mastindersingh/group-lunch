@@ -20,3 +20,28 @@ span.vote-count {
 .row {
 	margin-bottom: 0px;
 }
+
+.help-icon {
+	padding-right: 10px;
+}
+
+nav ul a.btn-floating {
+	margin-left: 0px;
+}
+
+.help-overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	color: #000;
+	background-color: #fff;
+	z-index: 10;
+}
+
+.help-overlay-content {
+	height: 100%;
+	background-color: #fff;
+	padding: 30px;
+}

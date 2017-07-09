@@ -17,7 +17,19 @@
 
       <nav class="teal accent-4">
         <div class="nav-wrapper">
-          <a href="/" class="brand-logo">Let's Do Lunch</a>
+          <a href="/" class="brand-logo">Let's Grab Lunch</a>
+          <ul class="right">
+            <li>
+              <a id="help" class="waves-effect waves-light right"><i class="material-icons">live_help</i></a>
+              <div class="help-overlay" style="display: none;">
+                <div class="help-overlay-content">
+                  <h4>How It Works</h4>
+                  <p>Everyone gets three votes for where they want to eat.</p>
+                  <p>Then, hit the "Results" button to get links to search for the best rated restaurants in your area!</p>
+                </div>
+              </div>
+            </li>
+          </ul>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/about.html">About</a></li>
             <li><a href="/support.html">Get Help</a></li>
@@ -158,6 +170,15 @@
           flipContainer.classList.toggle('hover');
           displayChipsResults();
         })
+
+        $('#help').click(function() {
+          $('.help-overlay').fadeIn();
+
+        });
+
+        // $('.tap-target').click(function() {
+        //   tapTarget('open');
+        // });
 
         // flipCardButton.addEventListener("click", function(){
         //   flipContainer.classList.toggle('hover');
