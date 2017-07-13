@@ -24,8 +24,9 @@
               <div class="help-overlay" style="display: none;">
                 <div class="help-overlay-content">
                   <h4>How It Works</h4>
-                  <p>Everyone gets three votes for where they want to eat.</p>
-                  <p>Then, hit the "Results" button to get links to search for the best rated restaurants in your area!</p>
+                  <i class="material-icons close-overlay">clear</i>
+                  <div>Everyone gets three votes for where they want to eat.</div>
+                  <div>Then, hit the "Results" button to get links to search for the best rated restaurants in your area!</div>
                 </div>
               </div>
             </li>
@@ -173,8 +174,11 @@
 
         $('#help').click(function() {
           $('.help-overlay').fadeIn();
-
         });
+
+        $('.close-overlay').click(function() {
+          $('.help-overlay').fadeOut();
+        })
 
         // $('.tap-target').click(function() {
         //   tapTarget('open');

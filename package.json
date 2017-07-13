@@ -1,0 +1,24 @@
+{
+  "name": "group-lunch",
+  "version": "1.0.0",
+  "description": "A simple web app to let you and your friends vote on a type of cuisine, then search it on Yelp by best ratings.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattfwood/group-lunch.git"
+  },
+  "author": "Matt Wood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattfwood/group-lunch/issues"
+  },
+  "homepage": "https://github.com/mattfwood/group-lunch#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}

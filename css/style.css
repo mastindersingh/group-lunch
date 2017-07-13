@@ -45,3 +45,9 @@ nav ul a.btn-floating {
 	background-color: #fff;
 	padding: 30px;
 }
+
+.close-overlay {
+	position: absolute;
+	right: 30px;
+	top: 20px;
+}
