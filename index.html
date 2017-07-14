@@ -62,8 +62,19 @@
                     <a href="#">Clear Mine</a>
                     <a href="#">Clear ALL Choices</a>
                   </div> -->
+                  <!-- <div class="card-action custom-option-input">
+                    <input type="text">
+                  </div> -->
                   <div class="card-action">
-                    <a class="waves-effect waves-light btn add-option-button">Add New Food Option</a>
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header">
+                            <a class="waves-effect waves-light btn add-option-button">Add New Food Option</a>
+                          </div>
+                          <div class="collapsible-body"><span><input type="text" class="custom-option-input"></span></div>
+                        </li>
+                    </ul>
+                    
                     <a class="waves-effect waves-light btn view-results teal darken-1">View Results</a>
                   </div>
                 </div>
@@ -180,6 +191,21 @@
         $('.close-overlay').click(function() {
           $('.help-overlay').fadeOut();
         })
+
+        $('.add-option-button').click(function() {
+          if ($(this).html() == "Confirm Addition") {
+            var newInput = $('.custom-option-input').val();
+            var newChip = {cuisine: newInput, voteCount: 0};
+            chipData.push(newChip);
+            displayChips();
+            $(this).html('Add New Food Option');
+            console.log('New Chip Added');
+          } else {
+            $(this).html('Confirm Addition');
+          }
+        })
+
+
 
         // $('.tap-target').click(function() {
         //   tapTarget('open');
