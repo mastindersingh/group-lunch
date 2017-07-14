@@ -64,10 +64,9 @@ function displayChipsResults() {
     for (i = 0; i < chipData.length; i++) {
         var cuisine = chipData[i].cuisine;
         var voteCount = chipData[i].voteCount;
-        var userZip = document.getElementById('zip-input')
-            .value;
+        // var userZip = document.getElementById('zip-input').value;
 
-        var chipTemplate = `<a href="https://www.yelp.com/search?find_desc=${encodeURI(cuisine)}&find_loc=${userZip}&start=0&sortby=rating"><div class="chip"><span class="vote-count">${voteCount}</span><span class="cuisine-name">${cuisine}</span></div></a>`;
+        var chipTemplate = `<a href="https://www.yelp.com/search?find_desc=${encodeURI(cuisine)}&find_loc=&start=0&sortby=rating"><div class="chip"><span class="vote-count">${voteCount}</span><span class="cuisine-name">${cuisine}</span></div></a>`;
 
         chipResultsContainer.innerHTML += chipTemplate;
     }
