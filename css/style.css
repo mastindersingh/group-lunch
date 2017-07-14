@@ -9,7 +9,7 @@ span.vote-count {
   color: #fff;
 }
 
-.view-results {
+.view-results, .add-option-button {
 	width: 100%;
 }
 
@@ -51,4 +51,12 @@ nav ul a.btn-floating {
 	position: absolute;
 	right: 30px;
 	top: 20px;
+}
+
+.btn + .btn {
+	margin-top: 10px;
+}
+
+.chip:active {
+	background-color: #bdbdbd;
 }
