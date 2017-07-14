@@ -1,5 +1,7 @@
 ### Let's Do Lunch (Working Title)
 
+DEMO: https://mattfwood.github.io/group-lunch/
+
 A simple web app to let you and your friends vote on a type of cuisine, then search it on Yelp by best ratings.
 
 TODO: 
